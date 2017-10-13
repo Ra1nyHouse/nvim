@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 
+Plug 'jiangmiao/auto-pairs' " 括号对齐
 call plug#end()
 
 " **************系统设置**************
@@ -59,7 +60,24 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 let g:airline_theme='tomorrow'
 
+" 利用 airline Tagbar 切换
+nmap t1 <Plug>AirlineSelectTab1
+nmap t2 <Plug>AirlineSelectTab2
+nmap t3 <Plug>AirlineSelectTab3
+nmap t4 <Plug>AirlineSelectTab4
+nmap t5 <Plug>AirlineSelectTab5
+nmap t6 <Plug>AirlineSelectTab6
+nmap t7 <Plug>AirlineSelectTab7
+nmap t8 <Plug>AirlineSelectTab8
+nmap t9 <Plug>AirlineSelectTab9
+nmap t[ <Plug>AirlineSelectPrevTab
+nmap t] <Plug>AirlineSelectNextTab
+
+
 nmap <f10> :TagbarToggle<CR>
 
 let g:NERDSpaceDelims = 1 " 注释后面自动加空格
+
+" 底部开启一个终端
+nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
 
