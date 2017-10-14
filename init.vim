@@ -81,3 +81,8 @@ let g:NERDSpaceDelims = 1 " 注释后面自动加空格
 " 底部开启一个终端
 nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
 
+" 使用 tab 选择自动补全的项目
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
