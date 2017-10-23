@@ -73,7 +73,7 @@ nmap t9 <Plug>AirlineSelectTab9
 nmap t[ <Plug>AirlineSelectPrevTab
 nmap t] <Plug>AirlineSelectNextTab
 
-
+nmap <f9> :NERDTreeToggle<CR>
 nmap <f10> :TagbarToggle<CR>
 
 let g:NERDSpaceDelims = 1 " 注释后面自动加空格
