@@ -18,7 +18,10 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 
 Plug 'jiangmiao/auto-pairs' " 括号对齐
+Plug 'easymotion/vim-easymotion' "快速移动光标
+
 call plug#end()
+
 
 " **************系统设置**************
 set number
@@ -85,4 +88,6 @@ nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+" 空格 调用光标跳转
+nmap <space> <leader><leader>w
 
