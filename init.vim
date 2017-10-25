@@ -63,6 +63,9 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 let g:airline_theme='tomorrow'
 
+" configure whether buffer numbers should be shown. >
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 " 利用 airline Tagbar 切换
 nmap t1 <Plug>AirlineSelectTab1
 nmap t2 <Plug>AirlineSelectTab2
@@ -83,6 +86,8 @@ let g:NERDSpaceDelims = 1 " 注释后面自动加空格
 
 " 底部开启一个终端
 nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
+" 执行python脚本
+nmap <f5> :bo vsp term://python % <cr>
 
 " 使用 tab 选择自动补全的项目
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
