@@ -21,6 +21,11 @@ Plug 'jiangmiao/auto-pairs' " 括号对齐
 Plug 'easymotion/vim-easymotion' "快速移动光标
 Plug 'w0rp/ale' "语法检查
 
+Plug 'junegunn/goyo.vim' "注意力集中
+Plug 'junegunn/limelight.vim'
+
+Plug 'vim-scripts/YankRing.vim'
+
 call plug#end()
 
 
@@ -98,4 +103,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " 空格 调用光标跳转
 nmap <space> <leader><leader>w
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
