@@ -107,3 +107,8 @@ nmap <space> <leader><leader>w
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
+nmap <leader>y :YRShow<cr>
+
