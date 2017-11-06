@@ -102,7 +102,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " 空格 调用光标跳转
-nmap <space> <leader><leader>w
+nmap <space> <leader><leader>s
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
