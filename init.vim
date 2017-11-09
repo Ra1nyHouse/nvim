@@ -2,9 +2,10 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " 自动补全的插件
-Plug 'roxma/nvim-completion-manager'
-" Plug 'Shougo/deoplete.nvim'
-" Plug 'zchee/deoplete-jedi'
+" Plug 'roxma/nvim-completion-manager'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'zchee/deoplete-jedi'
+Plug 'Shougo/echodoc.vim'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -35,6 +36,8 @@ set backspace=indent,eol,start "indent 表示可删除自动缩进产生的空�
 set cursorline
 set splitbelow
 set splitright
+set noshowmode  "重要，在insert模式下，不显示--INSERT--
+" set cmdheight=2
 " terminal-mode
 " To map <Esc> to exit terminal-mode:
     tnoremap <Esc> <C-\><C-n>
@@ -57,12 +60,8 @@ set splitright
     nnoremap <A-l> <C-w>l
 
 " ***************插件设置*************
-nmap <F9> :NERDTreeToggle<cr>
 
 colorscheme molokai
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
 
 " 显示 buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -93,7 +92,8 @@ nmap <f10> :TagbarToggle<CR>
 let g:NERDSpaceDelims = 1 " 注释后面自动加空格
 
 " 底部开启一个终端
-nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
+" nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
+
 " 执行python脚本
 nmap <f5> :wa<cr>:bo vsp term://python % <cr>
 
@@ -112,3 +112,12 @@ let g:yankring_replace_n_pkey = '<m-p>'
 let g:yankring_replace_n_nkey = '<m-n>'
 nmap <leader>y :YRShow<cr>
 
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+let g:echodoc#enable_at_startup = 1
+" set shortmess+=c "不显示匹数数量等信息
+
+" 自动补全ale
+let g:ale_enabled = 0
+nmap <F11> :ALEToggle<CR>
