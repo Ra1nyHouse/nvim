@@ -91,6 +91,8 @@ nmap <f10> :TagbarToggle<CR>
 
 let g:NERDSpaceDelims = 1 " 注释后面自动加空格
 
+let g:tagbar_autofocus = 1
+
 " 底部开启一个终端
 " nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
 
