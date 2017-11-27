@@ -67,6 +67,7 @@ colorscheme molokai
 
 " 显示 buffers
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 "显示tab的数字编号 
 " powerline支持
 "let g:airline_powerline_fonts = 1
 let g:airline_theme='tomorrow'
