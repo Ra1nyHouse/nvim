@@ -28,7 +28,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'vim-scripts/YankRing.vim'
 
 Plug 'terryma/vim-smooth-scroll'
-
 call plug#end()
 
 
@@ -68,13 +67,13 @@ colorscheme molokai
 " 显示 buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 "显示tab的数字编号 
-" powerline支持
-"let g:airline_powerline_fonts = 1
+" configure whether buffer numbers should be shown. >
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#show_close_button = 0
+
 let g:airline_theme='tomorrow'
 let g:airline#extensions#ale#enabled = 1
 
-" configure whether buffer numbers should be shown. >
-let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " 利用 airline Tagbar 切换
 nmap t1 <Plug>AirlineSelectTab1
