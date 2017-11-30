@@ -60,10 +60,21 @@ set noshowmode  "重要，在insert模式下，不显示--INSERT--
     nnoremap <A-k> <C-w>k
     nnoremap <A-l> <C-w>l
 
-" ***************插件设置*************
+" 使用 tab 选择自动补全的项目
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+" normal模式下支持删除换行
+nnoremap <cr> o<Esc>
+nnoremap <BS> a<BS><Esc>
+
+autocmd FileType python nnoremap <LocalLeader>f :0,$!yapf<CR>
+autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+" ***************插件设置*************
+" colorscheme
 colorscheme molokai
 
+" airline
 " 显示 buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 "显示tab的数字编号 
@@ -73,7 +84,6 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 let g:airline_theme='tomorrow'
 let g:airline#extensions#ale#enabled = 1
-
 
 " 利用 airline Tagbar 切换
 nmap t1 <Plug>AirlineSelectTab1
@@ -88,12 +98,15 @@ nmap t9 <Plug>AirlineSelectTab9
 nmap t[ <Plug>AirlineSelectPrevTab
 nmap t] <Plug>AirlineSelectNextTab
 
+" nerdtree
 nmap <f9> :NERDTreeToggle<CR>
-nmap <f10> :TagbarToggle<CR>
-
+" nerdcommenter
 let g:NERDSpaceDelims = 1 " 注释后面自动加空格
-
+" tagbar
+nmap <f10> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+
+
 
 " 底部开启一个终端
 " nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
@@ -101,13 +114,11 @@ let g:tagbar_autofocus = 1
 " 执行python脚本
 nmap <f5> :wa<cr>:bo vsp term://python % <cr>
 
-" 使用 tab 选择自动补全的项目
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
+" easymotion
 " 空格 调用光标跳转
 nmap <space> <leader><leader>s
 
+" goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
@@ -122,7 +133,8 @@ set completeopt-=preview
 let g:echodoc#enable_at_startup = 1
 " set shortmess+=c "不显示匹数数量等信息
 
-" 自动补全ale
+" ale
+" 默认不自动开启，提高速度 
 let g:ale_enabled = 0
 nmap <F11> :ALEToggle<CR>
 
