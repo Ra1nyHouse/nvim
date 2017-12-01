@@ -122,10 +122,11 @@ nmap <space> <leader><leader>s
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-
-let g:yankring_replace_n_pkey = '<m-p>'
-let g:yankring_replace_n_nkey = '<m-n>'
+" yankring
+" let g:yankring_replace_n_pkey = '<m-p>'
+" let g:yankring_replace_n_nkey = '<m-n>'
 nmap <leader>y :YRShow<cr>
+let g:yankring_history_file='.yankring_history_file'
 
 " Use deoplete
 let g:deoplete#enable_at_startup = 1
@@ -143,4 +144,3 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
-
