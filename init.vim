@@ -25,7 +25,7 @@ Plug 'w0rp/ale' "语法检查
 Plug 'junegunn/goyo.vim' "注意力集中
 Plug 'junegunn/limelight.vim'
 
-Plug 'vim-scripts/YankRing.vim'
+" Plug 'vim-scripts/YankRing.vim'
 
 Plug 'terryma/vim-smooth-scroll'
 call plug#end()
@@ -125,8 +125,8 @@ autocmd! User GoyoLeave Limelight!
 " yankring
 " let g:yankring_replace_n_pkey = '<m-p>'
 " let g:yankring_replace_n_nkey = '<m-n>'
-nmap <leader>y :YRShow<cr>
-let g:yankring_history_file='.yankring_history_file'
+" nmap <leader>y :YRShow<cr>
+" let g:yankring_history_file='.yankring_history_file'
 
 " Use deoplete
 let g:deoplete#enable_at_startup = 1
