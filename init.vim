@@ -28,6 +28,11 @@ Plug 'junegunn/limelight.vim'
 " Plug 'vim-scripts/YankRing.vim'
 
 Plug 'terryma/vim-smooth-scroll'
+
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 
@@ -144,3 +149,7 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
+
+
+" repeat 放在所有map最后
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
