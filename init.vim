@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'roxma/nvim-completion-manager'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
+Plug 'tweekmonster/deoplete-clang2'
 Plug 'Shougo/echodoc.vim'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -137,7 +138,7 @@ autocmd! User GoyoLeave Limelight!
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 let g:echodoc#enable_at_startup = 1
-" set shortmess+=c "不显示匹数数量等信息
+set shortmess+=c "不显示匹数数量等信息
 
 " ale
 " 默认不自动开启，提高速度 
