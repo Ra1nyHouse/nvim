@@ -72,10 +72,14 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " normal模式下支持删除换行
 nnoremap <cr> o<Esc>
-nnoremap <BS> a<BS><Esc>
+nnoremap <BS> i<BS><Esc>
 
 autocmd FileType python nnoremap <LocalLeader>f :0,$!yapf<CR>
 autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+
+" C语言
+set shiftwidth=4
+
 " ***************插件设置*************
 " colorscheme
 colorscheme molokai
@@ -111,7 +115,6 @@ let g:NERDSpaceDelims = 1 " 注释后面自动加空格
 " tagbar
 nmap <f10> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
-
 
 
 " 底部开启一个终端
