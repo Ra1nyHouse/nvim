@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'tomasr/molokai'
+Plug 'joshdick/onedark.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline' " 状态栏增强
@@ -82,7 +83,8 @@ set shiftwidth=4
 
 " ***************插件设置*************
 " colorscheme
-colorscheme molokai
+" colorscheme molokai
+colorscheme onedark
 
 " airline
 " 显示 buffers
@@ -92,7 +94,9 @@ let g:airline#extensions#tabline#tab_nr_type = 1 "显示tab的数字编号
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#show_close_button = 0
 
-let g:airline_theme='tomorrow'
+" let g:airline_theme='tomorrow'
+let g:airline_theme='onedark'
+
 let g:airline#extensions#ale#enabled = 1
 
 " 利用 airline Tagbar 切换
