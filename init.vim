@@ -40,7 +40,7 @@ call plug#end()
 
 
 " **************系统设置**************
-set mouse=a "支持鼠标模式
+" set mouse=a "支持鼠标模式
 set number
 set backspace=indent,eol,start "indent 表示可删除自动缩进产生的空格，eol 可删除回车，start 可删除此次插入前的字符
 set cursorline
