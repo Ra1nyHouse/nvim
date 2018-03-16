@@ -128,6 +128,7 @@ let g:tagbar_autofocus = 1
 
 " 执行python脚本
 nmap <f5> :wa<cr>:bo vsp term://python % <cr>
+nmap <f6> :wa<cr>:bo vsp term://python2.7 % <cr>
 
 " easymotion
 " 空格 调用光标跳转
