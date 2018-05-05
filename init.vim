@@ -2,11 +2,11 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " 自动补全的插件
-" Plug 'roxma/nvim-completion-manager'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'zchee/deoplete-jedi'
-Plug 'tweekmonster/deoplete-clang2'
-Plug 'Shougo/echodoc.vim'
+Plug 'roxma/nvim-completion-manager'
+" Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+" Plug 'zchee/deoplete-jedi'
+" Plug 'tweekmonster/deoplete-clang2'
+" Plug 'Shougo/echodoc.vim'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -138,17 +138,12 @@ nmap <space> <leader><leader>s
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" yankring
-" let g:yankring_replace_n_pkey = '<m-p>'
-" let g:yankring_replace_n_nkey = '<m-n>'
-" nmap <leader>y :YRShow<cr>
-" let g:yankring_history_file='.yankring_history_file'
 
-" Use deoplete
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview
-let g:echodoc#enable_at_startup = 1
-set shortmess+=c "不显示匹数数量等信息
+" Use deoplete echodoc
+" let g:deoplete#enable_at_startup = 1
+" set completeopt-=preview
+" let g:echodoc#enable_at_startup = 1
+" set shortmess+=c "不显示匹数数量等信息
 
 " ale
 " 默认不自动开启，提高速度 
