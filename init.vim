@@ -2,11 +2,28 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " 自动补全的插件
-Plug 'roxma/nvim-completion-manager'
+" Plug 'roxma/nvim-completion-manager'
 " Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 " Plug 'zchee/deoplete-jedi'
 " Plug 'tweekmonster/deoplete-clang2'
 " Plug 'Shougo/echodoc.vim'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANTE: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-pyclang'
+Plug 'ncm2/ncm2-go'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -151,10 +168,10 @@ let g:ale_enabled = 0
 nmap <F11> :ALEToggle<CR>
 
 " smooth-scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 
 
 " repeat 放在所有map最后
