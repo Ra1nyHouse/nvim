@@ -3,27 +3,32 @@ call plug#begin('~/.config/nvim/plugged')
 
 " 自动补全的插件
 " Plug 'roxma/nvim-completion-manager'
-" Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-" Plug 'zchee/deoplete-jedi'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'zchee/deoplete-jedi'
+" mac系统出现 Restarting server because it's taking too long 错误
+" 在.zshrc 中加入 export LC_CTYPE="en_US.UTF-8" (https://github.com/zchee/deoplete-jedi/issues/51)
+
 " Plug 'tweekmonster/deoplete-clang2'
 " Plug 'Shougo/echodoc.vim'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
 
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" ncm2速度较慢
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
 
-" IMPORTANTE: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
+" " enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 
-" NOTE: you need to install completion sources to get completions. Check
-" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-pyclang'
-Plug 'ncm2/ncm2-go'
+" " IMPORTANTE: :help Ncm2PopupOpen for more information
+" set completeopt=noinsert,menuone,noselect
+
+" " NOTE: you need to install completion sources to get completions. Check
+" " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-tmux'
+" Plug 'ncm2/ncm2-path'
+" Plug 'ncm2/ncm2-jedi'
+" Plug 'ncm2/ncm2-pyclang'
+" Plug 'ncm2/ncm2-go'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -157,7 +162,7 @@ autocmd! User GoyoLeave Limelight!
 
 
 " Use deoplete echodoc
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 " set completeopt-=preview
 " let g:echodoc#enable_at_startup = 1
 " set shortmess+=c "不显示匹数数量等信息
