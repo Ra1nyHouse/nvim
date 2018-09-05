@@ -166,6 +166,8 @@ let g:deoplete#enable_at_startup = 1
 " set completeopt-=preview
 " let g:echodoc#enable_at_startup = 1
 " set shortmess+=c "不显示匹数数量等信息
+" 设置 deoplete-jedi使用python3启动server 默认是python
+let g:deoplete#sources#jedi#python_path = 'python3'
 
 " ale
 " 默认不自动开启，提高速度 
