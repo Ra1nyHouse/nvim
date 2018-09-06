@@ -11,30 +11,14 @@ Plug 'zchee/deoplete-jedi'
 " Plug 'tweekmonster/deoplete-clang2'
 " Plug 'Shougo/echodoc.vim'
 
-" ncm2速度较慢
-" Plug 'ncm2/ncm2'
-" Plug 'roxma/nvim-yarp'
-
-" " enable ncm2 for all buffers
-" autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" " IMPORTANTE: :help Ncm2PopupOpen for more information
-" set completeopt=noinsert,menuone,noselect
-
-" " NOTE: you need to install completion sources to get completions. Check
-" " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-" Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-tmux'
-" Plug 'ncm2/ncm2-path'
-" Plug 'ncm2/ncm2-jedi'
-" Plug 'ncm2/ncm2-pyclang'
-" Plug 'ncm2/ncm2-go'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
-Plug 'tomasr/molokai'
-Plug 'joshdick/onedark.vim'
+" Plug 'tomasr/molokai'
+" Plug 'joshdick/onedark.vim'
+Plug 'aliou/moriarty.vim'
+Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline' " 状态栏增强
@@ -108,7 +92,10 @@ set shiftwidth=4
 " ***************插件设置*************
 " colorscheme
 " colorscheme molokai
-colorscheme onedark
+" colorscheme onedark
+
+" candycode blaquemagick
+colorscheme candycode
 
 " airline
 " 显示 buffers
@@ -149,7 +136,7 @@ let g:tagbar_autofocus = 1
 " nmap t<Enter> :bo sp term://zsh\|resize 5<CR>i
 
 " 执行python脚本
-nmap <f5> :wa<cr>:bo vsp term://python % <cr>
+nmap <f5> :wa<cr>:bo vsp term://python3 % <cr>
 nmap <f6> :wa<cr>:bo vsp term://python2.7 % <cr>
 
 " easymotion
