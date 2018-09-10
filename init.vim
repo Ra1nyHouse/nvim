@@ -35,7 +35,7 @@ Plug 'junegunn/limelight.vim'
 
 " Plug 'vim-scripts/YankRing.vim'
 
-Plug 'terryma/vim-smooth-scroll'
+" Plug 'terryma/vim-smooth-scroll'
 Plug 'sheerun/vim-polyglot' " 语法支持
 
 Plug 'LaTeX-Box-Team/LaTeX-Box'
